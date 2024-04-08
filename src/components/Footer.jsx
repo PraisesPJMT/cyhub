@@ -68,7 +68,7 @@ const Footer = () => {
 						<h3>Engege</h3>
 						<Link to='/about'>About Us</Link>
 						<Link to='/contact'>Contact Us</Link>
-						<Link to='/tip'>Send Us a Tip</Link>
+						<Link to='/tips'>Send Us a Tip</Link>
 					</div>
 					<div className='links-wrap'>
 						<h3>Policies</h3>
