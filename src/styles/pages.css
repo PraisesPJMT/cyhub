@@ -1,0 +1,45 @@
+/* General Styles */
+
+main {
+	padding: 2rem 2rem;
+}
+
+section.main {
+	width: 100%;
+	max-width: 900px;
+	margin: auto;
+}
+
+h1 {
+	color: #454a4f;
+	margin: 2rem 0;
+	font-size: 35px;
+}
+
+section.main .link {
+	color: #3e4348;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+
+	span {
+		font-size: 25px;
+	}
+
+	a {
+		color: #3e4348;
+		font-size: 12px;
+	}
+
+	a:hover {
+		color: #000;
+		text-decoration: underline;
+	}
+}
+
+.content {
+	p {
+		color: #3e4348;
+		margin: 1.5rem 0;
+	}
+}
