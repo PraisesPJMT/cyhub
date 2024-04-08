@@ -55,6 +55,10 @@ section.main .link {
 	}
 }
 
+em {
+    font-style: italic;
+}
+
 @media only screen and (max-width: 768px) {
 	main {
 		margin-top: 55px;
