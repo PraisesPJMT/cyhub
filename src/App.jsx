@@ -1,9 +1,11 @@
-function App() {
-	return (
-		<>
-			<div>App</div>
-		</>
-	);
-}
+import { createBrowserRouter } from 'react-router-dom';
+import Home from './pages/Home';
 
-export default App;
+const router = createBrowserRouter([
+	{
+		path: '/',
+		element: <Home />,
+	},
+]);
+
+export default router;
