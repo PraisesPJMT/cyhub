@@ -45,14 +45,15 @@ header .menu-btn:hover {
 }
 
 header .menu-wrap {
-	position: absolute;
+	position: fixed;
 	top: -4px;
-	left: -100vw;
+	left: -200vw;
 	height: 100vh;
 	width: 100%;
 	background: #fff9;
 	transition: left 0.5s ease-in-out;
 	margin: 0;
+	z-index: 100;
 }
 
 header .menu-wrap.open {
@@ -146,6 +147,13 @@ header .search {
 }
 
 @media only screen and (max-width: 768px) {
+	header {
+		position: fixed;
+		top: 0;
+		left: 0;
+        width: 100%;
+	}
+
 	header .menu {
 		max-width: none;
 	}

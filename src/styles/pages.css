@@ -16,6 +16,12 @@ h1 {
 	font-size: 35px;
 }
 
+h2 {
+	color: #454a4f;
+	margin: 1rem 0;
+	font-size: 25px;
+}
+
 section.main .link {
 	color: #3e4348;
 	display: flex;
@@ -41,5 +47,16 @@ section.main .link {
 	p {
 		color: #3e4348;
 		margin: 1.5rem 0;
+	}
+
+	a {
+		color: blue;
+		text-decoration: underline;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	main {
+		margin-top: 55px;
 	}
 }
