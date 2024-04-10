@@ -34,7 +34,7 @@ const Header = () => {
 		},
 		{
 			name: 'Privacy Policy',
-			link: '/policy',
+			link: '/privacy',
 		},
 		{
 			name: 'Terms & Conditions',

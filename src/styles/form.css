@@ -58,3 +58,10 @@ form {
 	width: 100%;
 	gap: 2rem;
 }
+
+@media only screen and (max-width: 768px) {
+	.field-row {
+		display: flex;
+		flex-direction: column;
+	}
+}

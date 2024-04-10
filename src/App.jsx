@@ -6,6 +6,7 @@ import About from './pages/About';
 import Privacy from './pages/Privacy';
 import Contact from './pages/Contact';
 import Disclosure from './pages/Disclosure';
+import SendUs from './pages/SendUs';
 
 const router = createBrowserRouter([
 	{
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
 	{
 		path: '/contact',
 		element: <Contact />,
+	},
+	{
+		path: '/tips',
+		element: <SendUs />,
 	},
 	{
 		path: '/disclosure',
