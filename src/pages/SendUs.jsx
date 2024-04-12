@@ -4,7 +4,11 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 import '../styles/pages.css';
-import { InputField, MessageField } from '../components/FormComponents';
+import {
+	InputField,
+	MessageField,
+	SubmitButton,
+} from '../components/FormComponents';
 
 const initialState = {
 	name: '',
@@ -21,12 +25,30 @@ const SendUs = () => {
 	const handleChange = (event) => {
 		setTipErr(initialState);
 		const { name, value } = event.target;
-		setTipErr((prev) => ({ ...prev, [name]: value }));
+		setTip((prev) => ({ ...prev, [name]: value }));
 	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+
+		if (
+			tip.name.length > 0 &&
+			tip.subject.length > 0 &&
+			tip.email.length > 0 &&
+			tip.message.length > 0
+		) {
+			setInit(true);
+			setTip(initialState);
+			setTipErr(initialState);
+		}
 	};
+
+	const handleReset = () => {
+		setInit(false);
+		setTip(initialState);
+		setTipErr(initialState);
+	};
+
 	return (
 		<>
 			<Header />
@@ -68,45 +90,59 @@ const SendUs = () => {
 						</p>
 					</section>
 					<section className='content'>
-						<form onSubmit={handleSubmit}>
-							<div className='field-row'>
-								<div className='field-col full'>
-									<InputField
-										name='name'
-										label='Name'
-										value={tip.name}
-										error={tipErr.name}
-										handleChange={handleChange}
-									/>
+						{init ? (
+							<div className='thanks'>
+								<p>
+									Thank you for reaching out to us. Our team will review your
+									message and reach you within 48 hours.
+								</p>
 
-									<InputField
-										type='email'
-										label='Email'
-										name='email'
-										value={tip.email}
-										error={tipErr.email}
-										handleChange={handleChange}
-									/>
-
-									<InputField
-										name='subject'
-										label='Subject'
-										value={tip.subject}
-										error={tipErr.subject}
-										handleChange={handleChange}
-									/>
-								</div>
-								<div className='field-col full high'>
-									<MessageField
-										name='message'
-										label='Message'
-										value={tip.message}
-										error={tipErr.message}
-										handleChange={handleChange}
-									/>
-								</div>
+								<button type='button' className='submit' onClick={handleReset}>
+									Send Another Tip
+								</button>
 							</div>
-						</form>
+						) : (
+							<form onSubmit={handleSubmit}>
+								<div className='field-row'>
+									<div className='field-col full'>
+										<InputField
+											name='name'
+											label='Name'
+											value={tip.name}
+											error={tipErr.name}
+											handleChange={handleChange}
+										/>
+
+										<InputField
+											type='email'
+											label='Email'
+											name='email'
+											value={tip.email}
+											error={tipErr.email}
+											handleChange={handleChange}
+										/>
+
+										<InputField
+											name='subject'
+											label='Subject'
+											value={tip.subject}
+											error={tipErr.subject}
+											handleChange={handleChange}
+										/>
+									</div>
+									<div className='field-col full high'>
+										<MessageField
+											name='message'
+											label='Message'
+											value={tip.message}
+											error={tipErr.message}
+											handleChange={handleChange}
+										/>
+									</div>
+								</div>
+								<SubmitButton label='Send' />
+							</form>
+						)}
 					</section>
 				</section>
 			</main>
