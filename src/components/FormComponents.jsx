@@ -53,3 +53,11 @@ export const MessageField = ({
 		</div>
 	);
 };
+
+export const SubmitButton = ({ label }) => {
+	return (
+		<button type='submit' className='submit'>
+			{label}
+		</button>
+	);
+};

@@ -212,7 +212,8 @@ aside .other-content p {
 	}
 }
 
-.pagination, .wrap {
+.pagination,
+.wrap {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -221,7 +222,7 @@ aside .other-content p {
 
 .wrap button {
 	padding: 0.3rem 0.4rem;
-    background: #3e434833;
+	background: #3e434833;
 	border: none;
 	cursor: pointer;
 	font-size: 14px;
@@ -229,7 +230,7 @@ aside .other-content p {
 
 .wrap button.active {
 	background: #000;
-    color: #fff;
+	color: #fff;
 }
 
 .wrap button:disabled {
@@ -238,6 +239,17 @@ aside .other-content p {
 
 .wrap button:hover {
 	background: #3e434888;
+}
+
+.thanks {
+	margin: 2rem auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	/* gap: 2rem; */
+	text-align: center;
 }
 
 @media only screen and (max-width: 768px) {

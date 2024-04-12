@@ -37,7 +37,7 @@ const Footer = () => {
 								/>
 							</g>
 						</svg>
-						CyHub
+						NDLEA-CyHub
 					</p>
 					<p className='ft-subtitle'>
 						NDLEA portal for latest Cybersecurity News, Research & Analysis.

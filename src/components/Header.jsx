@@ -74,7 +74,7 @@ const Header = () => {
 						/>
 					</g>
 				</svg>
-				CyHub
+				NDLEA-CyHub
 			</Link>
 
 			<div className={`menu-wrap ${open ? 'open' : ''}`}>

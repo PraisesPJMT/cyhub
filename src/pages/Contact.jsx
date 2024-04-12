@@ -4,7 +4,11 @@ import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 
 import '../styles/pages.css';
-import { InputField, MessageField } from '../components/FormComponents';
+import {
+	InputField,
+	MessageField,
+	SubmitButton,
+} from '../components/FormComponents';
 
 const initialState = {
 	name: '',
@@ -20,11 +24,27 @@ const Contact = () => {
 	const handleChange = (event) => {
 		setContactErr(initialState);
 		const { name, value } = event.target;
-		setContactErr((prev) => ({ ...prev, [name]: value }));
+		setContact((prev) => ({ ...prev, [name]: value }));
 	};
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+
+		if (
+			contact.name.length > 0 &&
+			contact.email.length > 0 &&
+			contact.message.length > 0
+		) {
+			setInit(true);
+			setContact(initialState);
+			setContactErr(initialState);
+		}
+	};
+
+	const handleReset = () => {
+		setInit(false);
+		setContact(initialState);
+		setContactErr(initialState);
 	};
 
 	return (
@@ -61,36 +81,53 @@ const Contact = () => {
 						</p>
 					</section>
 					<section className='content'>
-						<form onSubmit={handleSubmit}>
-							<div className='field-row'>
-								<div className='field-col full'>
-									<InputField
-										name='name'
-										label='Name'
-										value={contact.name}
-										error={contactErr.name}
-										handleChange={handleChange}
-									/>
-									<InputField
-										type='email'
-										label='Email'
-										name='email'
-										value={contact.email}
-										error={contactErr.email}
-										handleChange={handleChange}
-									/>
-								</div>
-								<div className='field-col full high'>
-									<MessageField
-										name='message'
-										label='Message'
-										value={contact.message}
-										error={contactErr.message}
-										handleChange={handleChange}
-									/>
-								</div>
+						{init ? (
+							<div className='thanks'>
+								<p>
+									Thank you for reaching out to us. Our team will review your
+									message and reach you within 48 hours.
+								</p>
+
+								<button type='button' className='submit' onClick={handleReset}>
+									Send Another Message
+								</button>
 							</div>
-						</form>
+						) : (
+							<form onSubmit={handleSubmit}>
+								<div className='field-row'>
+									<div className='field-col full'>
+										<InputField
+											name='name'
+											label='Name'
+											// required={true}
+											value={contact.name}
+											error={contactErr.name}
+											handleChange={handleChange}
+										/>
+										<InputField
+											type='email'
+											label='Email'
+											name='email'
+											// required={true}
+											value={contact.email}
+											error={contactErr.email}
+											handleChange={handleChange}
+										/>
+									</div>
+									<div className='field-col full high'>
+										<MessageField
+											name='message'
+											label='Message'
+											// required={true}
+											value={contact.message}
+											error={contactErr.message}
+											handleChange={handleChange}
+										/>
+									</div>
+								</div>
+								<SubmitButton label='Send' />
+							</form>
+						)}
 					</section>
 				</section>
 			</main>

@@ -59,6 +59,20 @@ form {
 	gap: 2rem;
 }
 
+button.submit {
+	color: #fff;
+	padding: 0.5rem 1rem;
+	margin: 2rem 0;
+	border: none;
+	background: #000;
+	width: fit-content;
+	cursor: pointer;
+}
+
+button.submit:hover {
+	background: #3e4348;
+}
+
 @media only screen and (max-width: 768px) {
 	.field-row {
 		display: flex;
