@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import News from './mock.js';
+// import News from './mock.js';
+import News from './mock.json';
 import { FaClock } from 'react-icons/fa6';
 import {
 	generateRandomNumbers,
@@ -13,7 +14,7 @@ import { Link } from 'react-router-dom';
 const apiKey = '86868e6a4a3c4709a194e31ec00fac46';
 
 const Home = () => {
-	const [articles, setArticles] = useState([News.slice(0, 101)]);
+	const [articles, setArticles] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
 	const [errorMessage, setErrorMessage] = useState('');
 	const [searchQuery, setSearchQuery] = useState('cyber hack');
@@ -33,6 +34,7 @@ const Home = () => {
 
 	useEffect(() => {
 		const fetchData = async () => {
+			setArticles(News);
 			setIsLoading(true);
 			setErrorMessage('');
 
