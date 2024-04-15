@@ -1,8 +1,37 @@
-# React + Vite
+# NDLEA-CyHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CyHub is the front-end of a cybersecurity news portal developed for the National Drug Law Enforcement Agency (NDLEA).
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [NDLEA-CyHub](#ndlea-cyhub)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Contributing](#contributing)
+  - [License](#license)
+
+## Features
+
+- Gives all the latest cybersecurity news in Nigeria and across the globe.
+- Allows the public to send messages to the NDLEA team.
+- Allows the public to send vulnerability tips to the cybersecurity unit of the NDLEA
+
+## Installation
+
+1. Clone the repository `git clone git@github.com:PraisesPJMT/cyhub.git`.
+2. Move to the project directory `cd cyhub`.
+3. Install dependencies using `npm install`.
+4. Start the development server using `npm run dev`.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/myFeature`).
+3. Make changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/myFeature`).
+5. Create a new Pull Request.
+
+## License
+
+This project is licensed under the MIT LICENSE - see the [LICENSE.md](./LICENSE.md) file for details.
