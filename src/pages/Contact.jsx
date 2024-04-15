@@ -16,6 +16,11 @@ const initialState = {
 	message: '',
 };
 
+/**
+ * Renders the Contact component with form fields for name, email, and message.
+ *
+ * @param {Object} event - The event object triggering the function.
+ */
 const Contact = () => {
 	const [contact, setContact] = useState(initialState);
 	const [contactErr, setContactErr] = useState(initialState);

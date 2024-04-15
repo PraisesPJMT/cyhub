@@ -1,3 +1,9 @@
+/**
+ * Generates an array of random numbers within a specified range.
+ *
+ * @param {number} arrLength - The length of the desired range for random number generation.
+ * @return {array} An array of random numbers within the specified range.
+ */
 export const generateRandomNumbers = (arrLength) => {
 	// Create an empty array to store the random numbers
 	const randomNumbers = [];
@@ -21,6 +27,12 @@ export const generateRandomNumbers = (arrLength) => {
 	return randomNumbers;
 };
 
+/**
+ * Formats a date and time object according to the Nigerian locale (en-NG).
+ *
+ * @param {Date} date - The date and time object to format, defaults to the current date and time if not provided.
+ * @return {string} The formatted date and time string in the specified format.
+ */
 export const formatDateTimeForNigeria = (date) => {
 	const input = date ? new Date(date) : new Date();
 	// Get the current date object

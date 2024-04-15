@@ -8,6 +8,18 @@ import Contact from './pages/Contact';
 import Disclosure from './pages/Disclosure';
 import SendUs from './pages/SendUs';
 
+/**
+ * Represents the router configuration for the application.
+ * @typedef {Object} RouterConfig
+ * @property {string} path - The path at which the component should be rendered.
+ * @property {JSX.Element} element - The JSX element to render at the specified path.
+ */
+
+/**
+ * Creates a router using the specified configuration.
+ * @param {RouterConfig[]} routes - An array of route configurations.
+ * @returns {Router} The created router.
+ */
 const router = createBrowserRouter([
 	{
 		path: '/',

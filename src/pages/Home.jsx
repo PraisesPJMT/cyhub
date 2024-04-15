@@ -13,6 +13,11 @@ import { Link } from 'react-router-dom';
 
 const apiKey = '86868e6a4a3c4709a194e31ec00fac46';
 
+/**
+ * Renders the Home component with news articles, featured content, and pagination.
+ *
+ * @return {JSX.Element} The JSX element representing the Home component.
+ */
 const Home = () => {
 	const [articles, setArticles] = useState([]);
 	const [isLoading, setIsLoading] = useState(false);
