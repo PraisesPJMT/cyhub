@@ -12,6 +12,11 @@ import {
 import { Link, NavLink } from 'react-router-dom';
 import { FaSearch } from 'react-icons/fa';
 
+/**
+ * Header component containing menu, logo, navigation links, and social media links.
+ *
+ * @return {JSX.Element} The header JSX element
+ */
 const Header = () => {
 	const [open, setOpen] = useState(false);
 

@@ -10,6 +10,11 @@ import {
 
 import '../styles/footer.css';
 
+/**
+ * Renders the footer component containing the logo, subtitle, social media links, and navigation links.
+ *
+ * @return {JSX.Element} The footer JSX element
+ */
 const Footer = () => {
 	return (
 		<footer>

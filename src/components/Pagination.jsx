@@ -1,3 +1,12 @@
+/**
+ * Renders the pagination component based on the current page, total list, and items per page.
+ *
+ * @param {number} currentPage - The current page number
+ * @param {function} setCurrentPage - The function to set the current page
+ * @param {number} totalList - The total number of items in the list
+ * @param {number} listPerPage - The number of items per page
+ * @return {JSX.Element} The pagination component
+ */
 const PaginationNav = ({
 	currentPage,
 	setCurrentPage,
