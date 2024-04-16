@@ -100,6 +100,7 @@ const Header = () => {
 								to={link.link}
 								onClick={() => setOpen(false)}
 								className={({ isActive }) => (isActive ? 'active' : '')}
+								aria-label={link.name}
 							>
 								{link.name}
 							</NavLink>
