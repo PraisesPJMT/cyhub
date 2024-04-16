@@ -57,6 +57,7 @@ section.main .link {
 
 	ul {
 		margin-left: 1.5rem;
+		color: #3e4348;
 	}
 
 	li {
@@ -153,6 +154,7 @@ aside .featured .featured-content a {
 	padding: 0.5rem 1rem;
 	background: #000;
 	width: fit-content;
+	width: -moz-fit-content;
 }
 
 aside .featured .featured-content a:hover {
@@ -205,6 +207,7 @@ aside .other-content p {
 		padding: 0.5rem 1rem;
 		background: #000;
 		width: fit-content;
+		width: -moz-fit-content;
 	}
 
 	a:hover {

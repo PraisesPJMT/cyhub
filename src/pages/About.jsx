@@ -28,19 +28,17 @@ const About = () => {
 					</section>
 					<section className='content'>
 						<h2>Our Mission</h2>
-						<p>
-							<ul>
-								<li>
-									To empower the NDLEA with the knowledge and resources needed
-									to navigate the ever-evolving cybersecurity landscape.
-								</li>
-								<li>
-									To provide timely and insightful news, analysis, and best
-									practices to enhance the agency's ability to protect its
-									operations and data.
-								</li>
-							</ul>
-						</p>
+						<ul>
+							<li>
+								To empower the NDLEA with the knowledge and resources needed to
+								navigate the ever-evolving cybersecurity landscape.
+							</li>
+							<li>
+								To provide timely and insightful news, analysis, and best
+								practices to enhance the agency's ability to protect its
+								operations and data.
+							</li>
+						</ul>
 					</section>
 					<section className='content'>
 						<h2>Our Team</h2>
@@ -48,16 +46,14 @@ const About = () => {
 							This portal is maintained by a dedicated team of security
 							professionals with expertise in:
 						</p>
-						<p>
-							<ul>
-								<li>Curating and analyzing relevant cybersecurity news.</li>
-								<li>
-									Presenting complex information in a clear and concise format
-									for easy consumption.
-								</li>
-								<li>Staying current on emerging threats and attack vectors.</li>
-							</ul>
-						</p>
+						<ul>
+							<li>Curating and analyzing relevant cybersecurity news.</li>
+							<li>
+								Presenting complex information in a clear and concise format for
+								easy consumption.
+							</li>
+							<li>Staying current on emerging threats and attack vectors.</li>
+						</ul>
 					</section>
 					<section className='content'>
 						<h2>Our Commitment</h2>

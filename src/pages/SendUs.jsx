@@ -67,21 +67,19 @@ const SendUs = () => {
 							in ensuring the portal remains relevant and addresses your
 							specific cybersecurity needs.
 						</p>
-						<p>
-							<ul>
-								<li>
-									Utilize the secure contact form below to submit any questions,
-									comments, or suggestions you may have regarding the portal's
-									content or functionality.
-								</li>
-								<li>
-									If you suspect a security breach or identify a potential
-									vulnerability within the NDLEA network, please report it
-									immediately through the designated internal channels
-									established by the agency's IT department.
-								</li>
-							</ul>
-						</p>
+						<ul>
+							<li>
+								Utilize the secure contact form below to submit any questions,
+								comments, or suggestions you may have regarding the portal's
+								content or functionality.
+							</li>
+							<li>
+								If you suspect a security breach or identify a potential
+								vulnerability within the NDLEA network, please report it
+								immediately through the designated internal channels established
+								by the agency's IT department.
+							</li>
+						</ul>
 						<p>
 							We are committed to responding to all inquiries in a timely and
 							professional manner. Please note that due to security protocols,

@@ -10,6 +10,7 @@ import {
 } from '../utilities/helpers.js';
 import PaginationNav from '../components/Pagination.jsx';
 import { Link } from 'react-router-dom';
+import { v4 as uuidv4 } from 'uuid';
 
 const apiKey = '86868e6a4a3c4709a194e31ec00fac46';
 
@@ -76,7 +77,7 @@ const Home = () => {
 			<main className='news'>
 				<section className='news-section'>
 					{currentList.map((news) => (
-						<section className='article' key={news?.url}>
+						<section className='article' key={uuidv4()}>
 							<a href={news?.url} target='_blank'>
 								<div className='article-image'>
 									<img src={news?.urlToImage} alt={news?.title} />
@@ -126,7 +127,12 @@ const Home = () => {
 					</div>
 
 					{featured.map((feature) => (
-						<a href={articles[feature]?.url} target='_blank' className='other'>
+						<a
+							href={articles[feature]?.url}
+							key={uuidv4()}
+							target='_blank'
+							className='other'
+						>
 							<div className='other-image'>
 								<img
 									src={articles[feature]?.urlToImage}
