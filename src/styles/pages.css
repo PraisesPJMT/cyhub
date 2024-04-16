@@ -153,8 +153,8 @@ aside .featured .featured-content a {
 	color: #fff;
 	padding: 0.5rem 1rem;
 	background: #000;
-	width: fit-content;
 	width: -moz-fit-content;
+	width: fit-content;
 }
 
 aside .featured .featured-content a:hover {
@@ -206,8 +206,8 @@ aside .other-content p {
 		color: #fff;
 		padding: 0.5rem 1rem;
 		background: #000;
-		width: fit-content;
 		width: -moz-fit-content;
+		width: fit-content;
 	}
 
 	a:hover {

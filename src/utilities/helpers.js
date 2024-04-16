@@ -52,4 +52,4 @@ export const formatDateTimeForNigeria = (date) => {
 
 	// Return the formatted date time string
 	return formattedDateTime;
-};1;
+};
