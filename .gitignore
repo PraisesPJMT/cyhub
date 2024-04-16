@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Snapshots
+*./src/_test_/_snapshot_/__snapshots__
+src/_test_/_snapshot_/__snapshots__/
+*./coverage
+coverage
