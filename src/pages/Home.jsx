@@ -38,9 +38,23 @@ const Home = () => {
 
 	const currentList = articles?.slice(indexOfFirstList, indexOfLastList);
 
+	const dressData = (apiData) => {
+		const sorted = apiData
+			.sort((a, b) => {
+				// Parse the publishedAt strings into Date objects
+				const dateA = new Date(a.publishedAt);
+				const dateB = new Date(b.publishedAt);
+
+				// Compare the dates
+				return dateB - dateA;
+			})
+			.filter((item) => item.author !== null);
+		return sorted;
+	};
+
 	useEffect(() => {
 		const fetchData = async () => {
-			setArticles(News);
+			setArticles(dressData(News));
 			setIsLoading(true);
 			setErrorMessage('');
 
@@ -54,9 +68,13 @@ const Home = () => {
 				}
 
 				const data = await response.json();
-				setArticles(data.articles.slice(0, 101));
+
+				const sorted = dressData(data.articles);
+
+				setArticles(sorted);
 			} catch (error) {
 				setErrorMessage(error.message);
+				console.log('Error: ', error);
 			} finally {
 				setIsLoading(false);
 			}
@@ -85,10 +103,15 @@ const Home = () => {
 								<div className='article-content'>
 									<h3>{news?.title}</h3>
 									<p className='meta'>
-										by
-										<strong>{news?.author}</strong>
-										<FaClock />
-										<span>{formatDateTimeForNigeria(news?.publishedAt)}</span>
+										<span className='author'>
+											By
+											<strong>{news?.author.slice(0, 20)}</strong>
+										</span>
+
+										<span className='date'>
+											<FaClock />
+											{formatDateTimeForNigeria(news?.publishedAt)}
+										</span>
 									</p>
 									<p className='article-description'>{news?.description}</p>
 								</div>

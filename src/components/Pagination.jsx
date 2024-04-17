@@ -54,16 +54,18 @@ const PaginationNav = ({
 				>
 					Prev
 				</button>
-				{pages.map((num, index) => (
-					<button
-						type='button'
-						key={num}
-						className={currentPage === num ? 'active' : ''}
-						onClick={() => setCurrentPage(num)}
-					>
-						{num}
-					</button>
-				))}
+				<div className="btn-wrap">
+					{pages.map((num, index) => (
+						<button
+							type='button'
+							key={num}
+							className={currentPage === num ? 'active' : ''}
+							onClick={() => setCurrentPage(num)}
+						>
+							{num}
+						</button>
+					))}
+				</div>
 				<button
 					type='button'
 					className='py-2 px-4 ml-2 hover:bg-gray hover:rounded-md focus:border-gray_dark focus:ring-gray_dark focus:bg-gray focus:rounded-md'
