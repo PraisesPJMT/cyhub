@@ -269,10 +269,15 @@ aside .other-content p {
 @media only screen and (max-width: 768px) {
 	main {
 		margin-top: 55px;
+		padding: 1rem 1rem;
 	}
 
 	main.news {
 		display: block;
+	}
+
+	.article a {
+		gap: 0.5rem;
 	}
 
 	.article-content h3 {
@@ -297,7 +302,8 @@ aside .other-content p {
 		display: none;
 	}
 
-	.pagination, .wrap {
+	.pagination,
+	.wrap {
 		flex-direction: column;
 	}
 }
